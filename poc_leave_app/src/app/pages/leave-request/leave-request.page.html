@@ -1,8 +1,61 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>leave_request</ion-title>
+    <ion-title>POC Leave Request</ion-title>
     <button>View Requests</button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content>
+  <section id="main">
+    <div id="form">
+      <label for="firstName">First Name : </label>
+      <div class="single-input">
+        <div class="icon-input"><ion-icon name="time-outline"></ion-icon></div>
+        <input type="text" placeholder="Enter your first name" />
+      </div>
+
+      <label for="lastName">Last Name : </label>
+      <div class="single-input">
+        <div class="icon-input"><ion-icon name="time-outline"></ion-icon></div>
+        <input type="text" placeholder="Enter your last name" />
+      </div>
+
+      <div class="two-col-input">
+        <label for="startDate">Start Date : </label>
+        <div class="single-input">
+          <div class="icon-input">
+            <ion-icon name="time-outline"></ion-icon>
+          </div>
+          <input type="date" />
+        </div>
+
+        <label for="endDate">End Date : </label>
+        <div class="single-input">
+          <div class="icon-input">
+            <ion-icon name="time-outline"></ion-icon>
+          </div>
+          <input type="date" />
+        </div>
+      </div>
+
+      <label for="reason">Reason : </label>
+      <div class="single-input">
+        <div class="icon-input"><ion-icon name="time-outline"></ion-icon></div>
+        <textarea
+          rows="10"
+          placeholder="Reason(s) for requesting leave"
+        ></textarea>
+      </div>
+
+      <label for="daysLeft">Leave Days Left : </label>
+      <div class="single-input">
+        <div class="icon-input">
+          <ion-icon name="time-outline"></ion-icon>
+        </div>
+        <input type="text" value="{{leave_count}}" />
+      </div>
+
+      <button>Submit</button>
+    </div>
+  </section>
+</ion-content>

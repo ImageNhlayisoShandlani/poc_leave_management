@@ -6,10 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./leave-request.page.scss'],
 })
 export class LeaveRequestPage implements OnInit {
+  leave_count: number = 30;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
