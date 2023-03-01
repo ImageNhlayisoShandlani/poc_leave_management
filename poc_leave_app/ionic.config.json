@@ -1,0 +1,7 @@
+{
+  "name": "poc_leave_app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
