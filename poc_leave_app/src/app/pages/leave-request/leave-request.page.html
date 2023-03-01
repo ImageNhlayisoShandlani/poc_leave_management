@@ -13,13 +13,22 @@
       <label for="firstName">First Name : </label>
       <div class="single-input">
         <div class="icon-input"><ion-icon name="time-outline"></ion-icon></div>
-        <input type="text" placeholder="Enter your first name" />
+        <input
+          [(ngModel)]="leave.first_name"
+          type="text"
+          placeholder="Enter your first name"
+        />
       </div>
 
       <label for="lastName">Last Name : </label>
       <div class="single-input">
         <div class="icon-input"><ion-icon name="time-outline"></ion-icon></div>
-        <input type="text" placeholder="Enter your last name" />
+        <input
+          [(ngModel)]="leave.last_name"
+          required
+          type="text"
+          placeholder="Enter your last name"
+        />
       </div>
 
       <div class="two-col-input">
@@ -28,7 +37,7 @@
           <div class="icon-input">
             <ion-icon name="time-outline"></ion-icon>
           </div>
-          <input type="date" />
+          <input [(ngModel)]="leave.start" type="date" required />
         </div>
 
         <label for="endDate">End Date : </label>
@@ -36,7 +45,7 @@
           <div class="icon-input">
             <ion-icon name="time-outline"></ion-icon>
           </div>
-          <input type="date" />
+          <input [(ngModel)]="leave.end" type="date" required />
         </div>
       </div>
 
@@ -44,6 +53,8 @@
       <div class="single-input" id="reason">
         <div class="icon-input"><ion-icon name="time-outline"></ion-icon></div>
         <textarea
+          [(ngModel)]="leave.reason"
+          required
           rows="10"
           placeholder="Reason(s) for requesting leave"
         ></textarea>
@@ -54,10 +65,15 @@
         <div class="icon-input">
           <ion-icon name="time-outline"></ion-icon>
         </div>
-        <input type="text" value="{{leave_count}}" />
+        <input
+          [(ngModel)]="leave.days_left"
+          required
+          type="text"
+          value="{{leave_count}}"
+        />
       </div>
 
-      <button>Submit</button>
+      <button (click)="saveTutorial()">Submit</button>
     </div>
   </section>
 </ion-content>
