@@ -2,8 +2,8 @@
   <ion-toolbar>
     <div id="view_header">
       <ion-title>view_leaves</ion-title>
-      <div>
-        <ion-icon name="people-outline"></ion-icon>
+      <div (click)="goBack()" style="cursor: pointer">
+        <ion-icon name="arrow-back-outline"></ion-icon>
         <p>back</p>
       </div>
     </div>
@@ -12,47 +12,47 @@
 
 <ion-content>
   <section>
-    <div class="single-request">
+    <div class="single-request" *ngFor="let p of leaves">
       <div class="single-item">
         <ion-icon name="map-outline"></ion-icon>
         <p>By :</p>
         &nbsp;
-        <p>Image</p>
+        <p>{{p.first_name}}</p>
         &nbsp;
-        <p>Shandlani</p>
+        <p>{{p.last_name}}</p>
       </div>
       <div class="single-item">
         <ion-icon name="map-outline"></ion-icon>
         <p>From :</p>
         &nbsp;
-        <p>March</p>
+        <p>{{p.start}}</p>
       </div>
       <div class="single-item">
         <ion-icon name="map-outline"></ion-icon>
         <p>To :</p>
         &nbsp;
-        <p>June</p>
+        <p>{{p.end}}</p>
       </div>
 
       <div class="single-item">
         <ion-icon name="map-outline"></ion-icon>
         <p>Type :</p>
         &nbsp;
-        <p>Educational</p>
+        <p>{{p.type}}</p>
       </div>
 
       <div class="single-item">
         <ion-icon name="map-outline"></ion-icon>
         <p style="word-wrap: normal">Reason :</p>
         &nbsp;
-        <p>Lorem ipsum dolor sit amet consectetur ouuhk hj</p>
+        <p>{{p.reason}}</p>
       </div>
 
       <div class="single-item">
         <ion-icon name="map-outline"></ion-icon>
         <p>Days Left :</p>
         &nbsp;
-        <p>2</p>
+        <p>{{p.days_left}}</p>
       </div>
       <div class="single-item"></div>
     </div>

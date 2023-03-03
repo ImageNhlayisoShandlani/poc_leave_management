@@ -12,7 +12,9 @@
     <div id="form">
       <label for="firstName">First Name : </label>
       <div class="single-input">
-        <div class="icon-input"><ion-icon name="time-outline"></ion-icon></div>
+        <div class="icon-input">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
         <input
           [(ngModel)]="leave.first_name"
           type="text"
@@ -22,7 +24,9 @@
 
       <label for="lastName">Last Name : </label>
       <div class="single-input">
-        <div class="icon-input"><ion-icon name="time-outline"></ion-icon></div>
+        <div class="icon-input">
+          <ion-icon name="person-add-outline"></ion-icon>
+        </div>
         <input
           [(ngModel)]="leave.last_name"
           required
@@ -33,7 +37,9 @@
 
       <label for="lastName">Type of leave : </label>
       <div class="single-input">
-        <div class="icon-input"><ion-icon name="time-outline"></ion-icon></div>
+        <div class="icon-input">
+          <ion-icon name="umbrella-outline"></ion-icon>
+        </div>
         <select [(ngModel)]="leave.type" name="" id="">
           <option value="select">Select Option</option>
           <option value="Maternity">Maternity</option>
@@ -56,7 +62,7 @@
         <label for="endDate">End Date : </label>
         <div class="single-input">
           <div class="icon-input">
-            <ion-icon name="time-outline"></ion-icon>
+            <ion-icon name="timer-outline"></ion-icon>
           </div>
           <input [(ngModel)]="leave.end" type="date" required />
         </div>
@@ -64,7 +70,9 @@
 
       <label for="reason">Reason : </label>
       <div class="single-input" id="reason">
-        <div class="icon-input"><ion-icon name="time-outline"></ion-icon></div>
+        <div class="icon-input">
+          <ion-icon name="information-circle-outline"></ion-icon>
+        </div>
         <textarea
           [(ngModel)]="leave.reason"
           required
@@ -76,7 +84,7 @@
       <label for="daysLeft">Leave Days Left : </label>
       <div class="single-input">
         <div class="icon-input">
-          <ion-icon name="time-outline"></ion-icon>
+          <ion-icon name="calculator-outline"></ion-icon>
         </div>
         <input
           [(ngModel)]="leave.days_left"
@@ -86,7 +94,7 @@
         />
       </div>
 
-      <button (click)="saveTutorial()">Submit</button>
+      <button (click)="saveTutorial()" type="">Submit</button>
     </div>
   </section>
 </ion-content>

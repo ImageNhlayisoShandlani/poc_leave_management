@@ -19,15 +19,21 @@ export class LeaveRequestPage implements OnInit {
   ngOnInit(): void {}
 
   saveTutorial(): void {
-    this.leaveServ.create(this.leave).then(() => {
-      console.log('Created new item successfully!');
-      this.submitted = true;
-    });
-
-    if (this.submitted) {
+    if (this.leave.first_name === '') {
       window.setTimeout(() => {
-        window.alert('all good');
-      }, 1000);
+        window.alert('bad');
+      }, 300);
+    } else {
+      this.leaveServ.create(this.leave).then(() => {
+        console.log('Created new item successfully!');
+        this.submitted = true;
+      });
+
+      if (this.submitted) {
+        window.setTimeout(() => {
+          window.alert('all good');
+        }, 300);
+      }
     }
   }
 
