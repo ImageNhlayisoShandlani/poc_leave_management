@@ -19,6 +19,10 @@ const routes: Routes = [
         (m) => m.LeaveRequestPageModule
       ),
   },
+  {
+    path: 'view-leaves',
+    loadChildren: () => import('./pages/view-leaves/view-leaves.module').then( m => m.ViewLeavesPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Leave } from 'src/app/models/leave.model';
 import { LeaveService } from 'src/app/services/leave/leave.service';
 
@@ -13,7 +14,7 @@ export class LeaveRequestPage implements OnInit {
   leave: Leave = new Leave();
   submitted = false;
 
-  constructor(private leaveServ: LeaveService) {}
+  constructor(private leaveServ: LeaveService, private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -28,5 +29,9 @@ export class LeaveRequestPage implements OnInit {
         window.alert('all good');
       }, 1000);
     }
+  }
+
+  goToViewPage() {
+    this.router.navigate(['view-leaves']);
   }
 }

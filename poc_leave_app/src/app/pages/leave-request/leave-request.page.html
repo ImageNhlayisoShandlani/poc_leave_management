@@ -2,7 +2,7 @@
   <ion-toolbar>
     <div>
       <ion-title>POC Leave Request</ion-title>
-      <button>View Requests</button>
+      <button (click)="goToViewPage()">View Requests</button>
     </div>
   </ion-toolbar>
 </ion-header>
@@ -29,6 +29,19 @@
           type="text"
           placeholder="Enter your last name"
         />
+      </div>
+
+      <label for="lastName">Type of leave : </label>
+      <div class="single-input">
+        <div class="icon-input"><ion-icon name="time-outline"></ion-icon></div>
+        <select [(ngModel)]="leave.type" name="" id="">
+          <option value="select">Select Option</option>
+          <option value="Maternity">Maternity</option>
+          <option value="Paternity">Paternity</option>
+          <option value="Personal">Personal</option>
+          <option value="Educational">Educational</option>
+          <option value="Other">Other</option>
+        </select>
       </div>
 
       <div class="two-col-input">

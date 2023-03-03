@@ -8,7 +8,7 @@ import {
   providedIn: 'root',
 })
 export class LeaveService {
-  private dbPath = '/poc_leave';
+  private dbPath = '/leave_db';
 
   leaveRef: AngularFirestoreCollection<Leave>;
 
