@@ -37,4 +37,11 @@ export class ViewLeavesPage implements OnInit {
         this.leaves = data;
       });
   }
+  viewNum(start: any) {
+    let fullString: string = start.toString();
+    let date = start.split('-', 3);
+    console.log(
+      'the year : ' + date[0] + ' Month : ' + date[1] + ' Day : ' + date[2]
+    );
+  }
 }
